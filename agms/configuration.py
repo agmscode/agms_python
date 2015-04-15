@@ -1,10 +1,13 @@
 from __future__ import absolute_import
 import sys
 import os
-from ConfigParser import SafeConfigParser
 from agms.connect import Connect
 from agms.util.requests_client import RequestsClient
 
+try:
+    from ConfigParser import SafeConfigParser
+except:
+    from configparser import SafeConfigParser
 
 class Configuration(object):
     """
