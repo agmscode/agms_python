@@ -101,7 +101,7 @@ class Connect(object):
                     data = data + str(value)
                     # Close Tag
                     data = data + "</" + key + ">"
-                except Exception, e:
+                except:
                     pass
         return data
 
