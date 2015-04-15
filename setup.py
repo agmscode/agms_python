@@ -31,24 +31,22 @@ else:
 
 # Don't import agms module here, since deps may not be installed
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'agms'))
-from version import VERSION
 
 setup(
     name='agms',
     cmdclass={'build_py': build_py},
-    version=VERSION,
+    version='0.1.0',
     description='Agms Python Library',
     long_description='Agms Python Library for Payment Gateway',
     author='Maanas Royy',
     author_email='maanas@agms.com',
     url='https://github.com/agmscode/agms_python',
     packages=['agms', 'agms.test'],
-    package_data={'agms': ['../VERSION']},
+    package_data={'agms': ['../Version']},
     install_requires=install_requires,
     test_suite='agms.test.all',
     use_2to3=True,
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
