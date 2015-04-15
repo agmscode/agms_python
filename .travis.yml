@@ -10,7 +10,12 @@ python:
 install:
   - pip install requests
   - pip install httpretty
+  - pip install coverage
+  - pip install coveralls
   - python setup.py install
 
 script:
-  - python -W always setup.py test
+  - nosetests --with-coverage agms/test/unit/*
+
+after_success:
+  - coveralls
