@@ -209,7 +209,7 @@ class TransactionTest(unittest.TestCase):
         }
         try:
             self.transaction_result = self.transaction.process(params)
-        except Exception, err:
+        except Exception as err:
             self.assertEqual(err[1]['response_code'], '10')
             self.assertEqual(err[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
             self.assertEqual(err[1]['transaction_id'], '550949')

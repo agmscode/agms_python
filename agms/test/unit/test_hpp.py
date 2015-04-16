@@ -30,7 +30,6 @@ class HPPTest(unittest.TestCase):
             'hpp_format': {'value': '1'},
         }
         self.hpp_result = self.hpp.generate(params)
-        self.assertIsInstance(self.hpp.get_hash(), unicode)
         self.assertEquals(self.hpp.get_hash(), 'wZZaqjttCWc9oy/hby3pD7IwYzLJ3oSo80HFylbOJkQ%3D')
 
     @httpretty.activate
@@ -49,7 +48,6 @@ class HPPTest(unittest.TestCase):
             'hpp_format': {'value': '1'},
         }
         self.hpp_result = self.hpp.generate(params)
-        self.assertIsInstance(self.hpp.get_link(), unicode)
         self.assertEquals(self.hpp.get_hash(), 'wZZaqjttCWc9oy/hby3pD7IwYzLJ3oSo80HFylbOJkQ%3D')
 
     def successful_HPPGetHash_response(self):
