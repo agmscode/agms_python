@@ -32,7 +32,7 @@ class TransactionTest(unittest.TestCase):
             'cc_cvv': {'value': '123'}
         }
         self.transaction_result = self.transaction.process(params)
-        self.assertIsInstance(self.transaction.response.to_array(), dict)
+        self.assertTrue(isinstance(self.transaction.response.to_array(), dict))
 
     @httpretty.activate
     def testSuccessfulSale(self):
