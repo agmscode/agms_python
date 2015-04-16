@@ -127,7 +127,7 @@ class SAFETest(unittest.TestCase):
         }
         try:
             self.safe_result = self.safe.update(params)
-        except ResponseException, e:
+        except ResponseException as e:
             self.assertEqual(str(e),'Transaction failed with error code 3 and message SAFE Record failed to update successfully.  No transaction processed. ')
 
     @httpretty.activate

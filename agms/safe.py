@@ -20,7 +20,7 @@ class SAFE(Agms):
         self._op = 'AddToSAFE'
         self._reset_parameters()
         self._set_parameter('SAFE_Action', {'value' : 'add_safe'})
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
@@ -29,7 +29,7 @@ class SAFE(Agms):
         self._op = 'UpdateSAFE'
         self._reset_parameters()
         self._set_parameter('SAFE_Action', {'value' : 'update_safe'})
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
@@ -38,7 +38,7 @@ class SAFE(Agms):
         self._op = 'DeleteFromSAFE'
         self._reset_parameters()
         self._set_parameter('SAFE_Action', {'value' : 'delete_safe'})
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()

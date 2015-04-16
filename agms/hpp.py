@@ -22,7 +22,7 @@ class HPP(Agms):
     def generate(self, params):
         self._op = 'ReturnHostedPaymentSetup'
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()

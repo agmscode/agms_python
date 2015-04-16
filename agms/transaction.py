@@ -19,7 +19,7 @@ class Transaction(Agms):
 
     def process(self, params):
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()

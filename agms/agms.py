@@ -84,7 +84,7 @@ class Agms():
             self._reset_parameters()
 
         if isinstance(opts, dict) and len(opts) > 0:
-            for param, value in opts.iteritems():
+            for param, value in opts.items():
                 self.request.set_field(field, param, value)
             return True
         else:
