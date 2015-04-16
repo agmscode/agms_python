@@ -52,7 +52,7 @@ Test cases can be run with: `nosetests agms/test/unit/*`
 
 ## Contributing
 
-1. Fork it ( https://github.com/agms_code/agms_python/fork )
+1. Fork it ( https://github.com/agmscode/agms_python#fork-destination-box )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
