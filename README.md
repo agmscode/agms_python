@@ -1,26 +1,43 @@
-# AGMS Python Client Library
+# AGMS Python Client Library [![Build Status](https://travis-ci.org/agmscode/agms_pythony.png?branch=master)](https://travis-ci.org/agmscode/agms_python)
 
-The AGMS library provides integration access to the Avant-Garde Gateway.
+The AGMS library provides integration to the Avant-Garde Payment Gateway.
 
 ## Dependencies 
 * [requests](http://docs.python-requests.org/en/latest/) or [PycURL](http://pycurl.sourceforge.net/)
 
-_Note:_ Although discouraged, the dependency on PycURL / requests can be bypassed during development or for deployment on servers where they are impossible to use via:
+## Installation
 
-    # Allow unsafe SSL, removes dependency on PycURL 
-    agms.Configuration.use_unsafe_ssl = True
+```python
+easy_install agms
+```
+
+or
+
+```python
+easy_install agms
+```
+
+## Usage
+
+Examples on how the AGMS Ruby library can be used are found as part of this package in:
+examples/
+* hpp.py
+* invoicing.py
+* recurring.py
+* report.py
+* safe.py
+* transaction.py
 
 
 ## Release Notes
 
-Support for Invoicing and Recurring are not yet completed.
-
+Support for Invoicing and Recurring are not yet completed and are still under development.
 
 
 ## Documentation
 
 * [Official documentation](https://www.onlinepaymentprocessing.com/docs/python)
-* [Bug Tracker](http://github.com/agms/agms_python/issues)
+* [Bug Tracker](http://github.com/agmscode/agms_python/issues)
 
 Examples can be found as part of this package in example_hpp.py, example_invoicing.py, example_recurring.py, example_report.py, example_safe.py, example_transaction.py.
 
@@ -28,6 +45,10 @@ Examples can be found as part of this package in example_hpp.py, example_invoici
 ## License
 
 See the LICENSE file.
+
+## Development
+
+Test cases can be run with: `nosetests agms/test/unit/*`
 
 ## Contributing
 
