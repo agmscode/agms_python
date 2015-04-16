@@ -8,6 +8,6 @@ setup(
     author_email="support@agms.com",
     url="https://www.onlinepaymentprocessing.com/docs/python",
     packages=["agms"],
-    install_requires=["requests>=0.11.1,<3.0"],
+    install_requires=["requests>=2.5.3,<3.0"],
     zip_safe=False
 )

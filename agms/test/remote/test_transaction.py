@@ -108,7 +108,6 @@ class RemoteTransactionTest(unittest.TestCase):
         self.assertEqual(self.transaction_result['response_message'], 'Capture successful: Approved')
         self.assertEqual(self.transaction_result['response_code'], '1')
         
-
     def testPartialCapture(self):
         params = {
             'transaction_type': {'value': 'auth'},
