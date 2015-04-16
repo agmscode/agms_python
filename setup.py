@@ -23,14 +23,10 @@ if sys.version_info < (2, 6):
         'If you have any questions, please file an issue on Github or '
         'contact us at developer@agms.com.',
         DeprecationWarning)
-    install_requires.append('requests >= 2.5.3, < 3.0.0')
+    install_requires.append('requests >= 0.8.8, < 0.10.1')
     install_requires.append('ssl')
-elif sys.version_info == (2, 6):
-    install_requires.append('requests == 2.5.3')
-    install_requires.append('ndg-httpsclient ')
 else:
-    install_requires.append('requests >= 2.5.3')
-
+    install_requires.append('requests >= 0.8.8')
 
 
 # Don't import agms module here, since deps may not be installed
