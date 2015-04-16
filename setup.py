@@ -25,9 +25,11 @@ if sys.version_info < (2, 6):
         DeprecationWarning)
     install_requires.append('requests >= 2.5.3, < 3.0.0')
     install_requires.append('ssl')
+elif sys.version_info == (2, 6):
+    install_requires.append('requests == 2.5.3')
 else:
     install_requires.append('requests >= 2.5.3')
-    
+
 
 
 # Don't import agms module here, since deps may not be installed
