@@ -215,7 +215,7 @@ class Request():
                     
         # Validate enumerated types
         if self._enums:
-            for field_name, valid_values in self._enums.iteritems():
+            for field_name, valid_values in self._enums.items():
                 if self._fields[field_name]['value'] and self._fields[field_name]['value'] not in valid_values:
                     errors += 1
                     messages.append('Invalid ' + field_name + ', value ' + self._fields[field_name]['value'] + ', must be one of ' + ', '.join(valid_values) + '.')
@@ -299,7 +299,7 @@ class Request():
         if self._validateErrors > 0:
             raise RequestValidationException('Request validation failed with ' + '  '.join(self._validateMessages) + '.')
 
-        for field_name, settings in self._fields.iteritems():
+        for field_name, settings in self._fields.items():
             if settings['setting'] == 'required':
                 request[field_name] = ''
                 request[field_name + '_Visible'] = 1

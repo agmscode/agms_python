@@ -46,4 +46,4 @@ class PycurlClient(object):
             curl.setopt(pycurl.READFUNCTION, StringIO.StringIO(body).read)
 
     def _format_headers(self, headers):
-        return [key + ": " + value for key, value in headers.iteritems()]
+        return [key + ": " + value for key, value in headers.items()]

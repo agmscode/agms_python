@@ -89,7 +89,7 @@ class Connect(object):
 
     def __dict_to_xml(self, request):
         data = ''
-        for key, value in request.iteritems():
+        for key, value in request.items():
             if value != '':
                 try:
                     # Open Tag

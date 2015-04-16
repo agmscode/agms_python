@@ -30,7 +30,7 @@ class Response():
             # If this element is an array, then we map its individual sub-arrays
             # Otherwise, we map
 
-            for key, value in arr.iteritems():
+            for key, value in arr.items():
                 if isinstance(value, dict):
                     response.append(self.__do_map(value))
                 else:

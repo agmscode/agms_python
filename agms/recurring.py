@@ -19,7 +19,7 @@ class Recurring(Agms):
     def add(self, params):
         self._op = 'RecurringAdd'
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
@@ -27,7 +27,7 @@ class Recurring(Agms):
     def delete(self, params):
         self._op = 'RecurringDelete'
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
@@ -35,7 +35,7 @@ class Recurring(Agms):
     def update(self, params):
         self._op = 'RecurringUpdate'
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
@@ -43,7 +43,7 @@ class Recurring(Agms):
     def get(self, params):
         self._op = 'RetrieveRecurringID'
         self._reset_parameters()
-        for param, config in params.iteritems():
+        for param, config in params.items():
             self._set_parameter(param, config)
         self._execute()
         return self.response.to_array()
