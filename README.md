@@ -36,7 +36,7 @@ Support for Invoicing and Recurring are not yet completed and are still under de
 
 ## Documentation
 
-* [Official documentation](https://www.onlinepaymentprocessing.com/docs/python)
+* [Official documentation](http://www.onlinepaymentprocessing.com/docs/python)
 * [Bug Tracker](http://github.com/agmscode/agms_python/issues)
 
 Examples can be found as part of this package in example_hpp.py, example_invoicing.py, example_recurring.py, example_report.py, example_safe.py, example_transaction.py.
