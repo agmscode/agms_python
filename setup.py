@@ -27,7 +27,7 @@ if sys.version_info < (2, 6):
     install_requires.append('ssl')
 elif sys.version_info == (2, 6):
     install_requires.append('requests == 2.5.3')
-    install_requires.append('ssl')
+    install_requires.append('ndg-httpsclient ')
 else:
     install_requires.append('requests >= 2.5.3')
 
