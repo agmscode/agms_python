@@ -27,7 +27,7 @@ if sys.version_info < (2, 6):
     install_requires.append('ssl')
 else:
     install_requires.append('requests >= 2.5.3')
-    install_requires.append('requests[security]')
+    
 
 
 # Don't import agms module here, since deps may not be installed
