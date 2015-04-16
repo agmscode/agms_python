@@ -1,4 +1,4 @@
-# AGMS Python Client Library [![Build Status](https://travis-ci.org/agmscode/agms_pythony.png?branch=master)](https://travis-ci.org/agmscode/agms_python)
+# AGMS Python Client Library [![Build Status](https://travis-ci.org/agmscode/agms_python.png?branch=master)](https://travis-ci.org/agmscode/agms_python)
 
 The AGMS library provides integration to the Avant-Garde Payment Gateway.
 
