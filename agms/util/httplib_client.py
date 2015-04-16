@@ -3,8 +3,8 @@ from agms.exception.not_found_exception import NotFoundException
 from agms.configuration import Configuration
 try:
     import httplib
-except ImportError, e:
-    raise NotFoundException(e)
+except ImportError:
+    raise NotFoundException()
 
 
 class HttplibClient(object):

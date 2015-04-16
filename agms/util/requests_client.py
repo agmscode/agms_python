@@ -2,8 +2,8 @@ from __future__ import absolute_import
 from agms.exception.not_found_exception import NotFoundException
 try:
     import requests
-except ImportError, e:
-    raise NotFoundException(e)
+except ImportError:
+    raise NotFoundException()
 
 
 class RequestsClient(object):
