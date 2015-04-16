@@ -3,8 +3,8 @@ import StringIO
 from agms.exception.not_found_exception import NotFoundException
 try:
     import pycurl
-except ImportError:
-    raise NotFoundException()
+except ImportError as e:
+    raise NotFoundException(e)
 
 
 class PycurlClient(object):
