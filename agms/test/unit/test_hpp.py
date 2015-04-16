@@ -12,7 +12,7 @@ class HPPTest(unittest.TestCase):
         self.hpp = HPP()
         
     def testHPPClassAssignment(self):
-        self.assertIsInstance(self.hpp, HPP)
+        self.assertTrue(isinstance(self.hpp, HPP))
 
     @httpretty.activate
     def testSuccessfulHPPGetHash(self):

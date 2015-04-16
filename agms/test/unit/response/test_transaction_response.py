@@ -28,8 +28,8 @@ class TransactionResponseTest(unittest.TestCase):
             'cc_cvv': {'value': '123'}
         }
         self.transaction_result = self.transaction.process(params)
-        self.assertIsInstance(self.transaction.response, TransactionResponse)
-        self.assertIsInstance(self.transaction.response, Response)
+        self.assertTrue(isinstance(self.transaction.response, TransactionResponse))
+        self.assertTrue(isinstance(self.transaction.response, Response))
 
     def successful_sale_response(self):
         return """

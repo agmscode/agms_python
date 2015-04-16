@@ -25,8 +25,8 @@ class ReportResponseTest(unittest.TestCase):
             'end_date': {'value': '2014-11-03'},
         }
         self.report_response = self.rep.list_transactions(params)
-        self.assertIsInstance(self.rep.response, ReportResponse)
-        self.assertIsInstance(self.rep.response, Response)
+        self.assertTrue(isinstance(self.rep.response, ReportResponse))
+        self.assertTrue(isinstance(self.rep.response, Response))
 
     def successful_TransactionAPI_response(self):
         return """

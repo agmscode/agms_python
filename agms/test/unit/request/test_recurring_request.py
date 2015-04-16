@@ -10,8 +10,8 @@ class RecurringRequestTest(unittest.TestCase):
         self.report_request = RecurringRequest('RecurringAdd')
         
     def testRecurringClassAssignment(self):
-        self.assertIsInstance(self.report_request, RecurringRequest)
-        self.assertIsInstance(self.report_request, Request)
+        self.assertTrue(isinstance(self.report_request, RecurringRequest))
+        self.assertTrue(isinstance(self.report_request, Request))
 
     
 if __name__ == '__main__':

@@ -10,8 +10,8 @@ class TransactionRequestTest(unittest.TestCase):
         self.transaction_request = TransactionRequest('ProcessTransaction')
         
     def testTransactionClassAssignment(self):
-        self.assertIsInstance(self.transaction_request, TransactionRequest)
-        self.assertIsInstance(self.transaction_request, Request)
+        self.assertTrue(isinstance(self.transaction_request, TransactionRequest))
+        self.assertTrue(isinstance(self.transaction_request, Request))
 
     
 if __name__ == '__main__':

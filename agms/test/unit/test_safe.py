@@ -13,7 +13,7 @@ class SAFETest(unittest.TestCase):
         self.safe = SAFE()
         
     def testSAFEClassAssignment(self):
-        self.assertIsInstance(self.safe, SAFE)
+        self.assertTrue(isinstance(self.safe, SAFE))
 
     @httpretty.activate
     def testSuccessfulSAFEAdd(self):

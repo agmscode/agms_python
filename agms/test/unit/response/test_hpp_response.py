@@ -30,8 +30,8 @@ class HPPResponseTest(unittest.TestCase):
             'hpp_format': {'value': '1'},
         }
         self.hpp.generate(params)
-        self.assertIsInstance(self.hpp.response, HPPResponse)
-        self.assertIsInstance(self.hpp.response, Response)
+        self.assertTrue(isinstance(self.hpp.response, HPPResponse))
+        self.assertTrue(isinstance(self.hpp.response, Response))
 
     def successful_HPPGetHash_response(self):
         return """

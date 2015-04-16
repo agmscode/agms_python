@@ -30,8 +30,8 @@ class SAFEResponseTest(unittest.TestCase):
             'cc_cvv': {'value': '123'}
         }
         self.safe_response = self.safe.add(params)
-        self.assertIsInstance(self.safe.response, SAFEResponse)
-        self.assertIsInstance(self.safe.response, Response)
+        self.assertTrue(isinstance(self.safe.response, SAFEResponse))
+        self.assertTrue(isinstance(self.safe.response, Response))
 
     def successful_SAFEAdd_response(self):
         return """

@@ -10,8 +10,8 @@ class ReportRequestTest(unittest.TestCase):
         self.report_request = ReportRequest('TransactionAPI')
         
     def testReportClassAssignment(self):
-        self.assertIsInstance(self.report_request, ReportRequest)
-        self.assertIsInstance(self.report_request, Request)
+        self.assertTrue(isinstance(self.report_request, ReportRequest))
+        self.assertTrue(isinstance(self.report_request, Request))
 
     
 if __name__ == '__main__':

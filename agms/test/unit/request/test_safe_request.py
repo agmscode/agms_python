@@ -10,8 +10,8 @@ class SAFERequestTest(unittest.TestCase):
         self.safe_request = SAFERequest('AddToSAFE')
         
     def testSAFEClassAssignment(self):
-        self.assertIsInstance(self.safe_request, SAFERequest)
-        self.assertIsInstance(self.safe_request, Request)
+        self.assertTrue(isinstance(self.safe_request, SAFERequest))
+        self.assertTrue(isinstance(self.safe_request, Request))
 
     
 if __name__ == '__main__':

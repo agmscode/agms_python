@@ -10,8 +10,8 @@ class HPPRequestTest(unittest.TestCase):
         self.report_request = HPPRequest('ReturnHostedPaymentSetup')
         
     def testHPPClassAssignment(self):
-        self.assertIsInstance(self.report_request, HPPRequest)
-        self.assertIsInstance(self.report_request, Request)
+        self.assertTrue(isinstance(self.report_request, HPPRequest))
+        self.assertTrue(isinstance(self.report_request, Request))
 
     
 if __name__ == '__main__':

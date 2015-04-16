@@ -12,7 +12,7 @@ class ReportTest(unittest.TestCase):
         self.report = Report()
         
     def testReportClassAssignment(self):
-        self.assertIsInstance(self.report, Report)
+        self.assertTrue(isinstance(self.report, Report))
 
     @httpretty.activate
     def testSuccessfulTransactionAPI(self):
@@ -25,7 +25,7 @@ class ReportTest(unittest.TestCase):
             'end_date': {'value': '2014-11-03'},
         }
         self.report_result = self.report.list_transactions(params)
-        self.assertIsInstance(self.report_result, list)
+        self.assertTrue(isinstance(self.report_result, list))
 
     @httpretty.activate
     def testSuccessfulSAFEAPI(self):
@@ -38,7 +38,7 @@ class ReportTest(unittest.TestCase):
             'end_date': {'value': '2014-11-03'},
         }
         self.report_result = self.report.list_SAFEs(params)
-        self.assertIsInstance(self.report_result, list)
+        self.assertTrue(isinstance(self.report_result, list))
 
     def successful_TransactionAPI_response(self):
         return """

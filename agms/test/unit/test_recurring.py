@@ -11,7 +11,7 @@ class RecurringTest(unittest.TestCase):
         self.recurring = Recurring()
         
     def testRecurringClassAssignment(self):
-        self.assertIsInstance(self.recurring, Recurring)
+        self.assertTrue(isinstance(self.recurring, Recurring))
 
     
 if __name__ == '__main__':

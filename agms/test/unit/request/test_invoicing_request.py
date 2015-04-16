@@ -10,8 +10,8 @@ class InvoicingRequestTest(unittest.TestCase):
         self.report_request = InvoicingRequest('RetrieveCustomerIDList')
         
     def testInvoicingClassAssignment(self):
-        self.assertIsInstance(self.report_request, InvoicingRequest)
-        self.assertIsInstance(self.report_request, Request)
+        self.assertTrue(isinstance(self.report_request, InvoicingRequest))
+        self.assertTrue(isinstance(self.report_request, Request))
 
     
 if __name__ == '__main__':
