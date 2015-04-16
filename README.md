@@ -14,7 +14,7 @@ easy_install agms
 or
 
 ```python
-easy_install agms
+pip install agms
 ```
 
 ## Usage
