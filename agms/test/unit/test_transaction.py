@@ -210,9 +210,9 @@ class TransactionTest(unittest.TestCase):
         try:
             self.transaction_result = self.transaction.process(params)
         except Exception as err:
-            self.assertEqual(err[1]['response_code'], '10')
-            self.assertEqual(err[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
-            self.assertEqual(err[1]['transaction_id'], '550949')
+            self.assertEqual(err.args[1]['response_code'], '10')
+            self.assertEqual(err.args[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
+            self.assertEqual(err.args[1]['transaction_id'], '550949')
 
     @httpretty.activate
     def testSuccessfulRefund(self):
@@ -314,10 +314,9 @@ class TransactionTest(unittest.TestCase):
         try:
             self.transaction_result = self.transaction.process(params)
         except Exception as err:
-            print(err)
-            self.assertEqual(err[1]['response_code'], '10')
-            self.assertEqual(err[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
-            self.assertEqual(err[1]['transaction_id'], '550953')
+            self.assertEqual(err.args[1]['response_code'], '10')
+            self.assertEqual(err.args[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
+            self.assertEqual(err.args[1]['transaction_id'], '550953')
 
     @httpretty.activate
     def testSuccessfulVoid(self):
@@ -382,9 +381,9 @@ class TransactionTest(unittest.TestCase):
         try:
             self.transaction_result = self.transaction.process(params)
         except Exception as err:
-            self.assertEqual(err[1]['response_code'], '10')
-            self.assertEqual(err[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
-            self.assertEqual(err[1]['transaction_id'], '550953')
+            self.assertEqual(err.args[1]['response_code'], '10')
+            self.assertEqual(err.args[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
+            self.assertEqual(err.args[1]['transaction_id'], '550953')
 
     @httpretty.activate
     def testSuccessfulVerify(self):
@@ -448,9 +447,9 @@ class TransactionTest(unittest.TestCase):
         try:
             self.transaction_result = self.transaction.process(params)
         except Exception as err:
-            self.assertEqual(err[1]['response_code'], '10')
-            self.assertEqual(err[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
-            self.assertEqual(err[1]['transaction_id'], '550953')
+            self.assertEqual(err.args[1]['response_code'], '10')
+            self.assertEqual(err.args[1]['response_message'], 'Transaction ID is not valid. Please double check your Transaction ID')
+            self.assertEqual(err.args[1]['transaction_id'], '550953')
 
 
     def successful_sale_response(self):
