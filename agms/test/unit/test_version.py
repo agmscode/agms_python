@@ -5,7 +5,7 @@ from agms.version import Version
 
 class VersionTest(unittest.TestCase):
     def testVersion(self):
-        self.assertEqual(Version, "0.1.0")
+        self.assertEqual(Version, "0.1.4")
 
 
 if __name__ == '__main__':

@@ -13,7 +13,7 @@ class Agms():
     # Version data
     MAJOR = 0
     MINOR = 1
-    TINY = 0
+    TINY = 4
 
     API = 3
 

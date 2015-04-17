@@ -27,7 +27,9 @@ if sys.version_info < (2, 6):
     install_requires.append('ssl')
 else:
     install_requires.append('requests >= 0.8.8')
-
+    install_requires.append('pyopenssl')
+    install_requires.append('ndg-httpsclient')
+    install_requires.append('pyasn1')
 
 # Don't import agms module here, since deps may not be installed
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'agms'))
@@ -35,7 +37,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'agms'))
 setup(
     name='agms',
     cmdclass={'build_py': build_py},
-    version='0.1.0',
+    version='0.1.4',
     description='Agms Python Library',
     long_description='Agms Python Library for Payment Gateway',
     author='Maanas Royy',

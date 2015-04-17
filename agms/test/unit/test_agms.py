@@ -28,13 +28,13 @@ class AgmsTest(unittest.TestCase):
     def testAgmsVersion(self):
         self.assertEqual(Agms.MAJOR, 0)
         self.assertEqual(Agms.MINOR, 1)
-        self.assertEqual(Agms.TINY, 0)
-        self.assertEqual(self.agms.get_library_version(),'0.1.0')
+        self.assertEqual(Agms.TINY, 4)
+        self.assertEqual(self.agms.get_library_version(), '0.1.4')
 
     def testAgmsWhatCardType(self):
         card_trunc = '345'  
-        self.assertEqual(self.agms.what_card_type(card_trunc), 'American Express' )
-        self.assertEqual(self.agms.what_card_type(card_trunc, 'abbreviation'), 'AX'   )
+        self.assertEqual(self.agms.what_card_type(card_trunc), 'American Express')
+        self.assertEqual(self.agms.what_card_type(card_trunc, 'abbreviation'), 'AX')
 
     def testAgmsDoConnect(self):
         self.assertEqual('Not Implemented', 'Not Implemented')

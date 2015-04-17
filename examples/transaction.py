@@ -16,5 +16,5 @@ params = {
 
 result = trans.process(params)
 
-print result
+print(result)
 
