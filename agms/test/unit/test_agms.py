@@ -28,8 +28,8 @@ class AgmsTest(unittest.TestCase):
     def testAgmsVersion(self):
         self.assertEqual(Agms.MAJOR, 0)
         self.assertEqual(Agms.MINOR, 1)
-        self.assertEqual(Agms.TINY, 4)
-        self.assertEqual(self.agms.get_library_version(), '0.1.4')
+        self.assertEqual(Agms.TINY, 5)
+        self.assertEqual(self.agms.get_library_version(), '0.1.5')
 
     def testAgmsWhatCardType(self):
         card_trunc = '345'  

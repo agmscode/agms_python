@@ -28,6 +28,16 @@ examples/
 * safe.py
 * transaction.py
 
+In case Insecure content warning is noticed then install security package
+```python
+easy_install requests[security]
+```
+
+or
+
+```python
+pip install requests[security]
+```
 
 ## Release Notes
 
