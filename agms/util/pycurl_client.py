@@ -1,5 +1,8 @@
 from __future__ import absolute_import
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 from agms.exception.not_found_exception import NotFoundException
 try:
     import pycurl
@@ -11,7 +14,7 @@ class PycurlClient(object):
     
     def http_do(self, http_verb, url, headers, request_body):
         curl = pycurl.Curl()
-        response = StringIO.StringIO()
+        response = StringIO()
 
         
         curl.setopt(pycurl.CAINFO, True)

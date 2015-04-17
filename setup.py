@@ -26,6 +26,7 @@ if sys.version_info < (2, 6):
     install_requires.append('requests >= 0.8.8, < 0.10.1')
     install_requires.append('ssl')
 else:
+    install_requires.append('pycurl')
     install_requires.append('requests >= 2.5.3')
     install_requires.append('pyopenssl')
     install_requires.append('ndg-httpsclient')
