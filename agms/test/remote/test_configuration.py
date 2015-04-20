@@ -1,14 +1,13 @@
 from __future__ import absolute_import
 import unittest
 from agms.configuration import Configuration
-from agms.util.http_client.requests_client import RequestsClient
+from agms.util.requests_client import RequestsClient
 
 
 class AgmsTest(unittest.TestCase):
     def setUp(self):
         Configuration.init('init.ini')
         self.config = Configuration.instantiate()
-        print self.config.__dict__
 
     def testConfigurationInit(self):
         self.assertEqual(Configuration.gateway_username, 'agmsdevdemo')

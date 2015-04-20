@@ -295,7 +295,6 @@ class Request():
         # Call validation, which ensures we've validated and done so against current data
         self.validate()
 
-        # TODO Do we need this
         if self._validateErrors > 0:
             raise RequestValidationException('Request validation failed with ' + '  '.join(self._validateMessages) + '.')
 
