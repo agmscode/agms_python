@@ -11,7 +11,7 @@ class RemoteTransactionTest(unittest.TestCase):
         self.transaction = Transaction()
         
     def testTransactionClassAssignment(self):
-        self.assertIsInstance(self.transaction, Transaction)
+        self.assertTrue(isinstance(self.transaction, Transaction))
 
     def testTransactionOp(self):
         self.assertEqual(self.transaction._op, 'ProcessTransaction')
@@ -28,7 +28,7 @@ class RemoteTransactionTest(unittest.TestCase):
 
         self.assertIsInstance(self.transaction, Transaction)
         self.assertEqual(self.transaction.request._fields['TransactionType']['value'], 'sale')
-        self.assertIsInstance(self.transaction.response.to_array(), dict)
+        self.assertTrue(isinstance(self.transaction.response.to_array(), dict))
 
     def testSuccessfulSale(self):
         params = {

@@ -11,7 +11,7 @@ class ReportTest(unittest.TestCase):
         self.report = Report()
         
     def testReportClassAssignment(self):
-        self.assertIsInstance(self.report, Report)
+        self.assertTrue(isinstance(self.report, Report))
 
     def testSuccessfulTransactionAPI(self):
         params = {
@@ -19,8 +19,7 @@ class ReportTest(unittest.TestCase):
             'end_date': {'value': '2015-03-31'},
         }
         report_result = self.report.list_transactions(params)
-        print report_result
-        self.assertIsInstance(report_result, list)
+        self.assertTrue(isinstance(report_result, list))
 
     def testSuccessfulSAFEAPI(self):
         params = {
@@ -28,7 +27,7 @@ class ReportTest(unittest.TestCase):
             'end_date': {'value': '2015-03-31'},
         }
         report_result = self.report.list_SAFEs(params)
-        self.assertIsInstance(report_result, list)
+        self.assertTrue(isinstance(report_result, list))
 
 
 if __name__ == '__main__':

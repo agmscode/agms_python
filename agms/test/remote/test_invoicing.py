@@ -11,7 +11,7 @@ class InvoicingTest(unittest.TestCase):
         self.invoicing = Invoicing()
         
     def testInvoicingClassAssignment(self):
-        self.assertIsInstance(self.invoicing, Invoicing)
+        self.assertTrue(isinstance(self.invoicing, Invoicing))
 
 
 if __name__ == '__main__':

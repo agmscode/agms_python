@@ -12,7 +12,7 @@ class SAFETest(unittest.TestCase):
         self.safe = SAFE()
         
     def testSAFEClassAssignment(self):
-        self.assertIsInstance(self.safe, SAFE)
+        self.assertTrue(isinstance(self.safe, SAFE))
 
     def testSuccessfulSAFEAdd(self):
         params = {
@@ -101,7 +101,7 @@ class SAFETest(unittest.TestCase):
         }
         try:
             self.safe_result = self.safe.update(params)
-        except ResponseException, e:
+        except ResponseException as e:
             self.assertEqual(str(e),
                              'Transaction failed with error code 3 and message SAFE Record failed to update successfully.  No transaction processed. ')
 
@@ -110,7 +110,7 @@ class SAFETest(unittest.TestCase):
             'payment_type': {'value': 'creditcard'},
             'first_name': {'value': 'Joe'},
             'last_name': {'value': 'Smith'},
-            'cc_number': { 'value': '4111111111111111'},
+            'cc_number': {'value': '4111111111111111'},
             'cc_exp_date': {'value': '0500'},
             'cc_cvv': {'value': '123'}
         }

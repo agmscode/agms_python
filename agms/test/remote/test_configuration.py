@@ -20,7 +20,7 @@ class AgmsTest(unittest.TestCase):
         self.assertEqual(self.config.gateway_api_key, 'b00f57326f8cf34bbb705a74b5fcbaa2b2f3e58076dc81f')
 
     def testHttpClient(self):
-        self.assertIsInstance(self.config._http_client, RequestsClient)
+        self.assertTrue(isinstance(self.config._http_client), RequestsClient)
 
 
 if __name__ == '__main__':

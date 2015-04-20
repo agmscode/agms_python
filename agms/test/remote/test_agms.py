@@ -42,11 +42,11 @@ class AgmsTest(unittest.TestCase):
 
     def testAgms_setParameter(self):
         self.agms._set_parameter('transaction_type', {'value': 'sale'})
-        self.assertIsInstance(self.agms, Agms)
+        self.assertTrue(isinstance(self.agms, Agms))
         self.assertEqual(self.agms.request._fields['TransactionType']['value'], 'sale')
 
     def testAgms_resetParameters(self):
-        self.assertIsInstance(self.agms.request, TransactionRequest)
+        self.assertTrue(isinstance(self.agms.request, TransactionRequest))
 
 
 if __name__ == '__main__':

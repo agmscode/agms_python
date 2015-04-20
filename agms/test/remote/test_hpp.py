@@ -11,7 +11,7 @@ class HPPTest(unittest.TestCase):
         self.hpp = HPP()
         
     def testHPPClassAssignment(self):
-        self.assertIsInstance(self.hpp, HPP)
+        self.assertTrue(isinstance(self.hpp, HPP))
 
     def testSuccessfulHPPGetHash(self):
         params = {
@@ -24,7 +24,7 @@ class HPPTest(unittest.TestCase):
             'hpp_format': {'value': '1'},
         }
         self.hpp_result = self.hpp.generate(params)
-        self.assertIsInstance(self.hpp.get_hash(), unicode)
+        self.assertTrue(isinstance(str(self.hpp.get_hash()), str))
 
     def testSuccessfulHPPGetLink(self):
         params = {
@@ -37,7 +37,7 @@ class HPPTest(unittest.TestCase):
             'hpp_format': {'value': '1'},
         }
         self.hpp_result = self.hpp.generate(params)
-        self.assertIsInstance(self.hpp.get_link(), unicode)
+        self.assertTrue(isinstance(str(self.hpp.get_link()), str))
 
 
 if __name__ == '__main__':
