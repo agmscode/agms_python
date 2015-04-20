@@ -19,7 +19,7 @@ install:
   - python setup.py install
 
 script:
-  - nosetests --with-coverage agms/test/unit/*
+  - nosetests --with-coverage agms/test/remote/*
 
 after_success:
   - coveralls
