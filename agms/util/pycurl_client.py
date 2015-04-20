@@ -15,7 +15,6 @@ class PycurlClient(object):
     def http_do(self, http_verb, url, headers, request_body):
         curl = pycurl.Curl()
         response = StringIO()
-        curl.setopt(curl.CAINFO, True)
         curl.setopt(curl.SSL_VERIFYPEER, 1)
         curl.setopt(curl.SSL_VERIFYHOST, 2)
         curl.setopt(curl.URL, url)
@@ -47,4 +46,4 @@ class PycurlClient(object):
             curl.setopt(curl.READFUNCTION, StringIO(body).read)
 
     def _format_headers(self, headers):
-        return [key + ": " + value for key, value in headers.items()]
+        return [str(key) + ": " + str(value) for key, value in headers.items()]

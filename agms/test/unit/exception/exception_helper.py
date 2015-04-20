@@ -16,54 +16,55 @@ from agms.exception.ssl_certificate_exception import SSLCertificateException
 from agms.exception.unexpected_exception import UnexpectedException
 from agms.exception.upgrade_required_exception import UpgradeRequiredException
 
+
 class ExceptionHelper():
-	def agmsException(self):
-		raise AgmsException('Agms Exception')
+    def agmsException(self):
+        raise AgmsException('Agms Exception')
 
-	def authenticationException(self):
-		raise AuthenticationException('Authentication Exception')
+    def authenticationException(self):
+        raise AuthenticationException('Authentication Exception')
 
-	def authorizationException(self):
-		raise AuthorizationException('Authorization Exception')
+    def authorizationException(self):
+        raise AuthorizationException('Authorization Exception')
 
-	def clientErrorException(self):
-		raise ClientErrorException('Client Error Exception')
+    def clientErrorException(self):
+        raise ClientErrorException('Client Error Exception')
 
-	def configurationException(self):
-		raise ConfigurationException('Configuration Exception')
+    def configurationException(self):
+        raise ConfigurationException('Configuration Exception')
 
-	def downForMaintenanceException(self):
-		raise DownForMaintenanceException('Down For Maintenance Exception')
+    def downForMaintenanceException(self):
+        raise DownForMaintenanceException('Down For Maintenance Exception')
 
-	def forgedQueryStringException(self):
-		raise ForgedQueryStringException('Forged Query String Exception')
+    def forgedQueryStringException(self):
+        raise ForgedQueryStringException('Forged Query String Exception')
 
-	def invalidParameterException(self):
-		raise InvalidParameterException('Invalid Parameter Exception')
+    def invalidParameterException(self):
+        raise InvalidParameterException('Invalid Parameter Exception')
 
-	def invalidRequestException(self):
-		raise InvalidRequestException('Invalid Request Exception')
+    def invalidRequestException(self):
+        raise InvalidRequestException('Invalid Request Exception')
 
-	def invalidSignatureException(self):
-		raise InvalidSignatureException('Invalid Signature Exception')
+    def invalidSignatureException(self):
+        raise InvalidSignatureException('Invalid Signature Exception')
 
-	def notFoundException(self):
-		raise NotFoundException('NotFoundException')
+    def notFoundException(self):
+        raise NotFoundException('NotFoundException')
 
-	def requestValidationException(self):
-		raise RequestValidationException('Request Validation Exception')
+    def requestValidationException(self):
+        raise RequestValidationException('Request Validation Exception')
 
-	def responseException(self):
-		raise ResponseException('Response Exception')
+    def responseException(self):
+        raise ResponseException('Response Exception')
 
-	def serverErrorException(self):
-		raise ServerErrorException('Server Error Exception')
+    def serverErrorException(self):
+        raise ServerErrorException('Server Error Exception')
 
-	def sslCertificateException(self):
-		raise SSLCertificateException('SSL Certificate Exception')
+    def sslCertificateException(self):
+        raise SSLCertificateException('SSL Certificate Exception')
 
-	def unexpectedException(self):
-		raise UnexpectedException('Unexpected Exception')
+    def unexpectedException(self):
+        raise UnexpectedException('Unexpected Exception')
 
-	def upgradeRequiredException(self):
-		raise UpgradeRequiredException('Upgrade Required Exception')
+    def upgradeRequiredException(self):
+        raise UpgradeRequiredException('Upgrade Required Exception')
